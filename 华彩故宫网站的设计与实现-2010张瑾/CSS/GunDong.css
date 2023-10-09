@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color:#fff6f0;
+
+		}
+		.view {
+			width: 1100px;  /* 图片滚动窗口的宽度*/
+			height: 130px;
+			margin: 200px auto;
+			position: relative;
+			overflow: hidden;
+			border: 1px solid #CCC;
+		}
+
+		ul {
+			width: 3292px;	/*所有图片的总宽度的两倍*/
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			position: absolute;
+			left: 0;
+			animation: move 8s linear infinite;
+		}
+
+		ul:hover {
+			/*调整动画状态*/
+			animation-play-state: paused;
+		}
+
+		li {
+			float: left;
+			font-size: 0;
+		}
+		#one{
+			text-align:center;
+			font-family:"华文行楷";
+			font-size:30px;
+			position:relative;			
+		}
+		/*动画序列*/
+		@keyframes move {
+			0% {
+				left: 0;
+			}
+
+			100% {
+				left: -1646px; /* 所有图片的总宽度*/
+			}
+		}
+
+
+

@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>“华彩世界.琉璃故宫”</title>
+    <link rel="stylesheet" href="CSS/zhuye.css" />
+    <script language="javascript" src="jquery-1.12.4.js"></script>
+    <script>
+        jQuery(function ($) {
+            $("#btn").bind("click", function () {
+                $("#txt").slideDown(200);
+            });
+            $("#btn").mouseout(function () {
+                $("#txt").hide(200);
+            });
+        });
+        // $(function () {
+        //     $('ul.header-ul1 li.nav-item').hover(function () {
+        //         $(this).children('div.subMenu').stop().slideToggle(600);
+        //     })
+        // })
+    </script>
+    <script>
+        var now = 1; //变量now代表当前图片，从第一幅图开始
+        var MAX = 4; //代表最大图片数
+        function show() {
+            if (arguments.length > 0) //判断函数调用时有参数传递
+            {
+                now = arguments[0];
+                window.clearTimeout(timer);
+            }
+            for (var i = 1; i <= MAX; i++) {
+                if (i == now) {
+                    document.getElementById("img" + i).style.display = "block";
+                    document.getElementById("btn" + i).className = "current";
+                } else {
+                    document.getElementById("img" + i).style.display = "none";
+                    document.getElementById("btn" + i).className = "normal";
+                }
+            }
+            if (now == MAX) now = 1;
+            else now++;
+            timer = window.setTimeout('show()', 2000);
+        }
+    </script>
+</head>
+
+<body onload="show();">
+    <div class="header">
+        <div class="container">
+            <ul class="header-ul1">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">导览</a></li>
+                <li><a href="page4.html">展览</a></li>
+                <li><a href="page1.html">教育</a></li>
+                <li><a href="#">探索</a></li>
+                <li><a href="#">学术</a></li>
+                <li><a href="#">文创</a></li>
+                <li><a href="导航.html">关于</a></li>
+            </ul>
+            <ul class="header-ul2">
+                <li><a href="page3.html">共赏美景</a></li>
+                <li><a href="page2.html">四季等你</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="header">
+        <div class="container">
+            <ul class="header-ul1">
+                <li class="nav-item"><a href="index.html">首页</a> </li>
+
+                <li claas="nav-item"><a href="#">导览</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">开放时间</a></li>
+                            <li><a href="#">浏览须知</a></li>
+                            <li><a href="#">交通路线</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="page4.html">展览</a></li>
+                     <div class="subMenu">
+                        <ul>
+                            <li><a href="#">近期展览</a></li>
+                            <li><a href="#">专馆</a></li>
+                            <li><a href="#">原状陈列</a></li>
+                        </ul>
+                    </div>
+                <li class="nav-item"><a href="page1.html">教育</a></li>
+                <li class="nav-item"><a href="#">探索</a></li>
+                <li class="nav-item"><a href="#">学术</a></li>
+                    <div class="subMenu">
+                        <ul>
+                            <li><a href="#">故宫学院</a></li>
+                            <li><a href="#">故宫研究院</a></li>
+                        </ul>
+                    </div>
+                <li class="nav-item"><a href="#">文创</a></li>
+                <li class="nav-item"><a href="#">关于</a></li>
+            </ul>
+            <ul class="header-ul2">
+                <li><a href="page2.html">共赏美景</a></li>
+                <li><a href="page2.html">四季等你</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    <div class="fixed">
+        <div class="box">
+            <div class="list">
+                <h3><a href="https://pano.dpm.org.cn/gugong_pano/index.html">全景故宫</a></h3>
+                <div class="pictxt"></div>
+            </div>
+            <div class="list">
+                <h3><a href="http://v.dpm.org.cn/">V故宫</a></h3>
+                <div class="pictxt"></div>
+            </div>
+            <div class="list">
+                <h3><a href="https://digicol.dpm.org.cn/">数字文物库</a></h3>
+                <div class="pictxt"></div>
+            </div>
+            <div class="list">
+                <h3><a href="https://www.dpm.org.cn/auditions.html">视听馆</a></h3>
+                <div class="pictxt"></div>
+            </div>
+            <div class="list">
+                <h3><a href="https://www.dpm.org.cn/librarys.html">图书馆</a></h3>
+                <div class="pictxt"></div>
+            </div>
+            <div class="list">
+                <h3><a href="https://www.dpm.org.cn/learning/dynamic.html">故宫资讯</a></h3>
+                <div class="pictxt"></div>
+            </div>
+            <div class="list">
+                <h3><a href="https://www.dpm.org.cn/onlines_detail/257405.html">故宫院刊</a></h3>
+                <div class="pictxt"></div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="search">
+            <div class="logo">
+                <img src="image/zhuye/logo1.jpg" style="height:100" width="100">
+            </div>
+            <div class="search-nav">
+                <ul>
+                    <li><a href="#">流金岁月</a></li>
+                    <li><a href="#">什袭珍藏</a></li>
+                    <li><a href="page5.html">丹宸永固</a></li>
+                    <li><a href="page6.html">墨笔丹青</a></li>
+                    <li><a href="#">学术研究</a></li>
+                    <li><a href="page1.html" target="_blank">查克日记</a></li>
+                </ul>
+            </div>
+            <div class="input">
+                <form action="#" method="post">
+                    <input class="text" type="text">
+                    <input class="submit" value="搜索" type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="turn">
+            <div class="container">
+                <img src="image/zhuye/dh01.png" id="img1" />
+                <img src="image/zhuye/dh02.jpg" id="img2" style="display:none;" />
+                <img src="image/zhuye/dh03.png" id="img3" style="display:none;" />
+                <img src="image/zhuye/1.jpeg" id="img4" style="display:none;" />
+            </div>
+            <div class="btns">
+                <a href="javascript:show(1)" class="current" id="btn1">1</a>
+                <a href="javascript:show(2)" class="normal" id="btn2">2</a>
+                <a href="javascript:show(3)" class="normal" id="btn3">3</a>
+                <a href="javascript:show(4)" class="normal" id="btn4">4</a>
+            </div>
+        </div>
+        <div class="picture">
+            <div class="suizhao">
+                岁朝美意
+            </div>
+            <marquee onMouseMove=stop(); onMouseOut=start(); scrollamount="20" scrolldelay="20">
+                <img src="image/zhuye/GD01.jpg"></a>&nbsp;&nbsp;
+                <img src="image/zhuye/GD02.jpg"></a>&nbsp;&nbsp;
+                <img src="image/zhuye/GD03.jpg"></a>&nbsp;&nbsp;
+                <img src="image/zhuye/GD05.jpg"></a>&nbsp;&nbsp;
+                <img src="image/zhuye/GD06.jpg"></a>
+            </marquee>
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="left-frame">
+                    <p></p>
+                    <ul>
+                        <li>[春满人间]<a href="#">”猫“在宫中，春回大地万物生</a></li>
+                        <li>[秋意酣醉]<a href="#">”猫“在宫中，秋日心愿不落空！</a></li>
+                        <li>[绿树阴垂]<a href="#">”猫“在宫中，盛夏清风</a></li>
+                        <li>[冬至初长]<a href="#">”猫“在宫中，一起过冬</a></li>
+                        <li>[幻彩琉璃]<a href="#">似一道彩云为银杏叶荫蔽落日融进斑驳树影间的彩画里</a></li>
+                    </ul>
+                </div>
+                <div class="left-frame1">
+                    <p>冬至至后日初长，绮窗寒浅。</p>
+                    <ul>
+                        <li>[瑞雪启祥]<a href="#">600年的紫禁城初雪如约而至</a></li>
+                        <li>[树影红墙]<a href="#">“冉冉秋光留不住，满阶红叶暮”</a></li>
+                        <li>[盛装出席]<a href="#">一个邀约，从无尽的北方远道而来，秋日的落幕演出</a></li>
+                        <li>[秋风启兮]<a href="#">宫猫换上华丽的冬衣，冷气从千里之外日渐逼近。</a></li>
+                        <li>[斗拱飞檐]<a href="#">深秋金色的仪式宣告开场，走过雕饰精美的断虹桥，目极之处豁然开朗</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-top">
+                    <div class="right-top-left"><img src="image/zhuye/G01.jpg" width="121px"> </div>
+                    <div class="text1">
+                        <p>故宫回声</p><br>一座宫一群人，13491箱文物，为了避免战火而辗转万里。离家是为了回家。
+                    </div>
+
+                    <div class="right-top-right"><img src="image/zhuye/G02.png" width="115px"> </div>
+                    <div class="text2">
+                        <p>太和殿脊兽 </p><br>太和殿屋脊上的脊兽顺序都乱了，请把他们放在正确的位置。
+                    </div>
+
+                </div>
+                <div class="right-middle">
+                    <div class="right-middle-left"><img src="image/zhuye/G03.jpg" width="122px"> </div>
+                    <div class="text1">
+                        <p>铜镀金珐琅群仙祝寿楼阁式钟 </p><br>钟表是故宫博物院丰富藏品中非常特殊与珍贵的门类，无论是藏品数量，还是类别都堪称世界博物馆钟表收藏中的翘楚。
+                    </div>
+
+                    <div class="right-middle-right"><img src="image/zhuye/G04.jpg" width="125px"> </div>
+                    <div class="text2">
+                        <p>珍宝馆</p><br>这些文物历经岁月淘洗，成为中华民族悠久历史和灿烂文化的物证。可谓精美绝伦、竭尽巧思，代表了当时的最高工艺技术水平。
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="right-bottom-left"><img src="image/zhuye/G05.jpg" width="125px"> </div>
+                    <div class="text1">
+                        <p>雕塑馆</p><br>故宫博物院的前身是明清两代皇宫，其宫廷旧藏中的铜造像，丰满端正，静穆柔美，体现了明初宫廷风格特点。清朝六世班禅像则是清宫藏传佛教造像代表作品。
+                    </div>
+                    <div class="right-bottom-right"><img src="image/zhuye/G06.jpg" width="115px"> </div>
+                    <div class="text2">
+                        <p>吉祥如意 </p><br>瑞牛启泰，万象更新。尽如人意，故称“如意”。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <div class="one">
+                <ol>
+                    <li>&nbsp;&nbsp; 网站地图&nbsp;&nbsp; </li>
+                    <li>影像授权&nbsp;&nbsp; </li>
+                    <li>隐私政策&nbsp;&nbsp; </li>
+                    <li>版权声明&nbsp;&nbsp; </li>
+                    <li>留言板 &nbsp;&nbsp; </li>
+                    <li>关于我们</li>
+                    <br />
+                </ol>
+
+                <ol>
+                    <li>网站维护：故宫博物院数字与信息部&nbsp;&nbsp;&nbsp;</li>
+                    <li>联系方式：gugong111@dpm.org.cn </li>
+                </ol>
+                <br />
+            </div>
+            <div class="two">2022-现在 故宫博物馆</div>
+        </div>
+        <div id="d1">
+            <input type="button" id="btn" value="浏览建议" />
+            <div id="txt">建议使用火狐 谷歌 360浏览器 最佳分辨率（1366 * 768）</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

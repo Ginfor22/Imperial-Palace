@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>琉璃故宫</title>
+<style>
+body {
+			margin: 0;
+			padding: 0;
+			font-family: '楷体';
+			background-color:#F7F7F7;
+			background-image:url(image/BJ2.jpg);
+		}
+		.gg{
+			text-align:center;
+			font-size:60px;
+		}
+		.nav {
+			height: 60px;
+			width:auto;
+			margin-top: 50px;
+			text-align: center;
+			list-style: none;
+			margin-left:50px;
+		}
+
+		li {
+			width: 150px;
+			height: 50px;
+			text-align: center;
+			line-height: 40px;
+			float:left;
+			font-size:30px;
+			position:relative;
+			transform-style: preserve-3d;
+			transition: all 1s;
+		}
+	
+		li span {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		li span:nth-child(1) {
+			background-color:#933;
+			transform: rotateX(90deg) translateZ(20px);
+		}
+
+		li span:nth-child(2) {
+			background-color:#999;
+			transform: translateZ(20px);
+		}
+
+		li:hover {
+			transform: rotateX(-90deg);
+		}
+</style>
+</head>
+
+<body>
+<div class="all">
+	<ul class="nav">
+		<li><a href="page1.html">
+			<span>查克日记</span>
+			<span>神奇动物</span></a>
+		</li>
+		<li><a href="page5.html">
+			<span>建筑名画</span>
+			<span>殿堂仪范</span></a>
+		</li>
+		<li><a href="page3.html">
+			<span>花间晚照</span>
+			<span>宫候多时</span></a>
+		</li>
+		<li><a href="page4.html">
+			<span>池鱼灵动</span>
+			<span>荷塘水满</span></a>
+		</li>
+		<li><a href="page4.html">
+			<span>金黄若叶</span>
+			<span>树影红墙</span></a>
+		</li>
+        <li><a href="page4.html">
+			<span>雪落宫墙</span>
+			<span>纷纷扬扬</span></a>
+		</li>
+        <li><a href="page4.html">
+			<span>丹宸永固</span>
+			<span>礼乐复合</span></a>
+		</li>
+        <li><a href="page4.html">
+			<span>丹宸永固</span>
+			<span>礼乐复合</span></a>
+		</li>
+        <li><a href="page2.html">
+			<span>四季等你</span>
+			<span>共赏美景</span></a>
+		</li>
+</ul>
+<h1 class="gg">琉璃故宫即将上线，敬请期待！</h1>
+	<div align="center">
+	<video controls src="video/华彩故宫.mp4"></video>
+	</div>
+</div>
+</body>
+</html>
